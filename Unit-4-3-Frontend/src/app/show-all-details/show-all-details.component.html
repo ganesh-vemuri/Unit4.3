@@ -6,8 +6,20 @@
   >
     <a routerLink="/add-student" style="text-decoration: none; color: black"
       >Add Student</a
-    ></button
-  ><br />
+    >
+  </button>
+  <label><b>Search By Student Name</b></label
+  >&nbsp;
+  <input
+    style="text-align-last: start"
+    type="text"
+    name="search"
+    id="search"
+    #search
+  />
+  <button type="button" (click)="findStudent(search.value)">Search</button>
+
+  <br />
 
   <style>
     table {

@@ -13,8 +13,8 @@ export class ApiService {
   public getAllElectivesData() {
     return this.http.get('http://localhost:3000/findAllStudents');
   }
-  public findStudent(body: any) {
-    return this.http.get('http://localhost:3000/findStudent', body);
+  public findStudent(name: any) {
+    return this.http.get(`http://localhost:3000/findStudent/${name}`);
   }
   public deleteStudent(body: any) {
     return this.http.delete('http://localhost:3000/deleteStudent', body);

@@ -29,9 +29,9 @@ router.post("/updateElectives", (req, res) => {
   );
 });
 
-router.get("/findStudent", (req, res) => {
+router.get("/findStudent/:name", (req, res) => {
   studentElectivesController.find(
-    { name: req.body.name.toLowerCase() },
+    { name: req.params.name.toLowerCase() },
     (err, studentDetails) => {
       if (err) {
         return res.send({ response: err });
